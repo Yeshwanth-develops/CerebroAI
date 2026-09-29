@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cerebro-ai"
+version = "1.0.0"
+description = "Advanced Alzheimer's Brain MRI Diagnostic Suite & Generative Augmentation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "CerebroAI Team"}
+]
+dependencies = [
+    "tensorflow>=2.10.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.7.0",
+    "Pillow>=9.4.0",
+    "matplotlib>=3.6.0",
+    "streamlit>=1.28.0"
+]
+
+[project.scripts]
+cerebro = "main:main"

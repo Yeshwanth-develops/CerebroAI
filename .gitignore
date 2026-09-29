@@ -1,0 +1,30 @@
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Large training weights (if generated locally)
+*.h5
+*.hdf5
+*.tflite
+models/*.h5
+models/*.hdf5

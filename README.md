@@ -1,4 +1,4 @@
-# 🧠 CerebroAI: Deep Learning Brain MRI Diagnostic Suite & Generative Augmentation
+# CerebroAI: Deep Learning Brain MRI Diagnostic Suite & Generative Augmentation
 
 <p align="center">
   <img src="reports/Generation_Example.png" alt="CerebroAI Brain MRI Synthesis & Diagnosis" width="750px" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"/>
@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 **CerebroAI** is an end-to-end, clinically interpretable deep learning platform engineered for automated **Alzheimer's Disease (AD)** vs. **Cognitively Normal (CN)** detection from 3D T1-weighted structural MRI scans (ADNI Cohort).
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 🏆 Key Results & Benchmarks
+## Key Results & Benchmarks
 
 Benchmarking of the **Custom ResNet-18** architecture across three balancing paradigms on the ADNI test cohort:
 
@@ -36,11 +36,11 @@ Benchmarking of the **Custom ResNet-18** architecture across three balancing par
 | **Raw Baseline (Imbalanced)** | 78.2% | 71.4% | 61.2% | 93.5% | 0.841 | ❌ High False Negative Rate |
 | **Random Undersampling** | 82.5% | 82.1% | 81.3% | 83.2% | 0.892 | ⚠️ Severe Data Loss (~35% discarded) |
 | **Stratified Subject Undersampling** | 85.1% | 84.7% | 83.8% | 86.0% | 0.915 | ⚠️ Discards valid patient scans |
-| 🚀 **CerebroAI (WGAN-GP Oversampling)** | **93.6%** | **93.6%** | **92.4%** | **94.8%** | **0.974** | ✅ **Optimal: High sensitivity & zero data loss** |
+| **CerebroAI (WGAN-GP Oversampling)** | **93.6%** | **93.6%** | **92.4%** | **94.8%** | **0.974** | ✅ **Optimal: High sensitivity & zero data loss** |
 
 ---
 
-## 📐 System Architecture & Workflow
+## System Architecture & Workflow
 
 ```mermaid
 graph TD
@@ -64,7 +64,7 @@ graph TD
 
 ---
 
-## 🔬 Technical Deep-Dive
+## Technical Deep-Dive
 
 ### 1. Zero-Leakage Preprocessing Pipeline (`src/data/`)
 * **3D Volumetric Slicing**: Converts high-dimensional volumetric NIfTI scans into standardized 2D axial PNG slices ($192 \times 160 \times 1$).
@@ -97,7 +97,7 @@ $$\alpha_k^c = \frac{1}{Z} \sum_{i} \sum_{j} \frac{\partial y^c}{\partial A_{i,j
 
 ---
 
-## 💻 Interactive Streamlit Diagnostic Suite
+## Interactive Streamlit Diagnostic Suite
 
 CerebroAI features a **glassmorphic, dark-themed clinical dashboard** built with Streamlit:
 
@@ -113,7 +113,7 @@ streamlit run app.py
 
 ---
 
-## 📁 Repository Structure
+## Structure
 
 ```text
 CerebroAI/
@@ -152,7 +152,7 @@ CerebroAI/
 
 ---
 
-## ⚡ Quickstart & Usage
+## Quickstart & Usage
 
 ### 1. Environment Setup
 
@@ -195,7 +195,7 @@ Open **`http://localhost:8501`** in your browser.
 
 ---
 
-## 🛠️ Technologies & Stack
+## Technologies & Stack
 
 * **Deep Learning Framework**: TensorFlow 2.x, Keras 3
 * **Medical Image Processing**: NiBabel (3D NIfTI parsing), OpenCV, Pillow
@@ -205,12 +205,12 @@ Open **`http://localhost:8501`** in your browser.
 
 ---
 
-## 📑 Clinical Dataset & Ethics
+## Clinical Dataset & Ethics
 
 Data used in this research was obtained from the **Alzheimer's Disease Neuroimaging Initiative (ADNI)** database ([adni.loni.usc.edu](https://adni.loni.usc.edu/)). The primary goal of ADNI is to test whether serial MRI, PET, other biological markers, and clinical and neuropsychological assessment can be combined to measure the progression of Mild Cognitive Impairment (MCI) and early Alzheimer's Disease (AD).
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the terms of the [MIT License](LICENSE).
